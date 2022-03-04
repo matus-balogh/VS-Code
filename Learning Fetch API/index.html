@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Getting Started With Fetch API</h1>
+        <button id="fetchUserDataBtn">Fetch User Data</button>
+    </div>
+    <hr>
+    <div id="response"></div>
+</body>
+
+<body>
+    ...    <script>
+        document.getElementById('fetchUserDataBtn').addEventListener('click', fetchUserData);
+
+            function fetchUserData(){
+            fetch('https://content.guardianapis.com/search?api-key=4755d17e-dce0-4b88-ba7c-bcc8f0e21ed9')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        }
+
+    </script>
+</body>
+</body>
+</html>
